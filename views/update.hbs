@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Movie | Netflix+</title>
+
+    <link rel="stylesheet" href="/css/update.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h1 class="logo">NETFLIX<span>+</span></h1>
+        <a href="/movie/dashboard" class="home-btn">Home</a>
+    </nav>
+
+    <!-- MAIN SECTION -->
+    <div class="main-container">
+
+        <div class="heading">
+            <span class="tag">MOVIE MANAGEMENT</span>
+            <h1>Update Your Movie</h1>
+            <p>Make changes to your movie details below.</p>
+        </div>
+
+        <!-- FORM CARD -->
+        <div class="form-container">
+
+            <form action="/movie/edit/{{data._id}}" method="POST" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label>🎬 Movie Name</label>
+                    <input
+                        type="text"
+                        name="movieName"
+                        value="{{data.movieName}}"
+                        placeholder="Enter movie name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>🎥 Director</label>
+                    <input
+                        type="text"
+                        name="director"
+                        value="{{data.director}}"
+                        placeholder="Enter director name"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label>📅 Release Date</label>
+                        <input
+                            type="date"
+                            name="releaseDate"
+                            value="{{data.releaseDate}}"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>🎭 Genre</label>
+                        <input
+                            type="text"
+                            name="genre"
+                            value="{{data.genre}}"
+                            placeholder="Enter genre"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label>⏱ Duration (Minutes)</label>
+                    <input
+                        type="number"
+                        name="duration"
+                        value="{{data.duration}}"
+                        placeholder="Enter duration"
+                        min="1"
+                        required
+                    >
+                </div>
+
+                <!-- IMAGE SECTION -->
+                <div class="image-section">
+
+                    <label>🖼 Current Movie Poster</label>
+
+                    <div class="poster-preview">
+                        <img src="{{data.movieImage}}" alt="{{data.movieName}}">
+                    </div>
+
+                    <label class="upload-label">Change Movie Poster</label>
+
+                    <input
+                        type="file"
+                        name="image"
+                        accept="image/*"
+                        class="file-input"
+                    >
+
+                    <p class="help-text">
+                        Leave empty if you don't want to change the current poster.
+                    </p>
+
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="button-group">
+
+                    <button type="submit" class="update-btn">
+                        ✏️ Save Changes
+                    </button>
+
+                    <a href="/movie/dashboard" class="cancel-btn">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Netflix+ | Movie Management System</p>
+    </footer>
+
+</body>
+</html>

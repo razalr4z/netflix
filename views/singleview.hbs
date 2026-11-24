@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="/css/singleview.css">
+</head>
+<body>
+
+    <div class="movie-card">
+        <h2>🎬 Movie Details</h2>
+        <div class="product-image">
+            <img src="{{result.movieImage}}" alt="{{result.movieName}}">
+        </div>
+        <p><span>Movie Name:</span> {{result.movieName}}</p>
+        <p><span>Director:</span> {{result.director}}</p>
+        <p><span>Release Date:</span> {{result.releaseDate}}</p>
+        <p><span>Genre:</span> {{result.genre}}</p>
+        <p><span>Duration:</span> {{result.duration}}</p>
+    </div>
+
+</body>
+</html>

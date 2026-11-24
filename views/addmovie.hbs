@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Movie</title>
+    <link rel="stylesheet" href="/css/add.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">NETFLIX<span>+</span></h1>
+
+        <a href="/movie/dashboard" class="home-btn">
+            Home
+        </a>
+    </nav>
+
+    <div class="banner">
+        <h1>🎬 Add New Movie</h1>
+        <p>Add your favourite movies to your collection.</p>
+    </div>
+
+    <div class="form-container">
+
+        <div class="form-card">
+
+            <div class="form-icon">🎥</div>
+
+            <h2>Movie Information</h2>
+
+            <form action="/movie/display" method="POST"  enctype="multipart/form-data">
+
+                <label>Movie Name</label>
+                <input type="text" name="movieName"
+                       placeholder="Enter movie name" required>
+
+                <label>Director</label>
+                <input type="text" name="director"
+                       placeholder="Enter director name" required>
+
+                <label>Release Date</label>
+                <input type="date" name="releaseDate" required>
+
+                <label>Genre</label>
+                <input type="text" name="genre"
+                       placeholder="Enter movie genre" required>
+
+                <label>Duration (Minutes)</label>
+                <input type="number" name="duration"
+                       placeholder="Enter duration" min="1" required>
+
+                {{!--
+                <label>Rating</label>
+                <input type="number" name="rating"
+                       min="0" max="10" step="0.1"
+                       placeholder="Enter rating" required>
+                --}}
+                <label>Movie Image:</label>
+                 <input type="file" name="image" required>
+
+                <button type="submit">
+                    + Add Movie
+                </button>
+
+                <a href="/movie/dashboard" class="back-btn">
+                    ← Back to Dashboard
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 MovieFlix | Your Entertainment Destination</p>
+    </footer>
+
+</body>
+</html>

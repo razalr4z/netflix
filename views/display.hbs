@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="/css/display.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">NETFLIX<span>+</span></h1>
+        <a href="/movie/dashboard" class="home-btn">Home</a>
+    </nav>
+
+    <div class="main-container">
+
+        <div class="movie-banner">
+            <div class="banner-content">
+                <span class="tag">NOW SHOWING</span>
+                <h1>🎬 Movie Details</h1>
+                <p>Your entertainment starts here.</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+
+            <div class="movie-card">
+
+                <div class="movie-icon">
+                    <img src="{{movies.movieImage}}" alt="{{movies.movieName}}">
+                </div>
+
+                <h2>{{movies.movieName}}</h2>
+
+                <div class="details">
+
+                    <p>
+                        <span>🎬 Director</span>
+                        <strong>{{movies.director}}</strong>
+                    </p>
+
+                    <p>
+                        <span>📅 Release Date</span>
+                        <strong>{{movies.releaseDate}}</strong>
+                    </p>
+
+                    <p>
+                        <span>🎭 Genre</span>
+                        <strong>{{movies.genre}}</strong>
+                    </p>
+
+                    <p>
+                        <span>⏱ Duration</span>
+                        <strong>{{movies.duration}} minutes</strong>
+                    </p>
+
+                </div>
+
+                <!-- UPDATE BUTTON -->
+                <a href="/movie/update/{{movies._id}}" class="update-btn">
+                    ✏️ Update Movie
+                </a>
+
+                <!-- DELETE BUTTON -->
+                <form action="/movie/delete/{{movies._id}}" method="POST"
+                      onsubmit="return confirm('Are you sure you want to delete this movie?')">
+
+                    <button type="submit" class="delete-btn">
+                        🗑️ Delete Movie
+                    </button>
+
+                </form>
+
+                <a href="/movie/dashboard" class="back-btn">
+                    ← Back to Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 MovieFlix | Your Entertainment Destination</p>
+    </footer>
+
+</body>
+</html>

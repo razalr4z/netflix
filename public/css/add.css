@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+    min-height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    background: #080808;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: white;
+}
+
+.home-btn {
+    background: #e50914;
+    color: white;
+    padding: 11px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: #b20710;
+}
+
+/* Banner */
+
+.banner {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.banner p {
+    color: #ccc;
+    font-size: 16px;
+}
+
+/* Form Container */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Form Card */
+
+.form-card {
+    width: 480px;
+    background: #181818;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 35px rgba(229, 9, 20, 0.12);
+    transition: 0.3s;
+}
+
+.form-card:hover {
+    border-color: #e50914;
+    transform: translateY(-4px);
+}
+
+.form-icon {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-card h2 {
+    text-align: center;
+    color: #e50914;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+/* Form Elements */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #ddd;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+input {
+    padding: 13px;
+    margin-bottom: 20px;
+    background: #252525;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #e50914;
+    box-shadow: 0 0 8px rgba(229, 9, 20, 0.3);
+}
+
+input::placeholder {
+    color: #888;
+}
+
+input[type="date"] {
+    color-scheme: dark;
+}
+
+/* Submit Button */
+
+button {
+    background: #e50914;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #b20710;
+    transform: scale(1.02);
+}
+
+/* Back Button */
+
+.back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 13px;
+    background: #303030;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #444;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+    border-top: 1px solid #222;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .banner h1 {
+        font-size: 27px;
+    }
+
+    .form-card {
+        padding: 25px 20px;
+    }
+}

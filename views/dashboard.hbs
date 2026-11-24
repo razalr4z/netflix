@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <h1 class="logo">NETFLIX<span>+</span></h1>
+            <a href="/movie/addmovie" class="add-btn">+ Add Movie</a>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Unlimited Movies,<br>Unlimited Entertainment.</h1>
+                <p>Discover your next favourite movie.</p>
+                <a href="#movies" class="explore-btn">Explore Movies</a>
+            </div>
+        </section>
+
+        <!-- MOVIE SECTION -->
+        <section class="movies-section" id="movies">
+
+            <h2 class="section-title">🔥 Available Movies</h2>
+
+            <div class="movie-container">
+
+                {{#each movies}}
+
+                <div class="movie-card">
+
+                    <!-- MOVIE IMAGE -->
+                    <div class="movie-banner">
+
+                        <span class="movie-tag">MOVIE</span>
+
+                        <img
+                            src="{{this.movieImage}}"
+                            alt="{{this.movieName}}"
+                            class="movie-poster"
+                        >
+
+                    </div>
+
+                    <!-- MOVIE NAME -->
+                    <div class="movie-info">
+
+                        <h2>{{this.movieName}}</h2>
+
+                        <a href="/movie/{{this._id}}" class="watch-btn">
+                            ▶ View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+                {{/each}}
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2026 MovieFlix | Your Entertainment Destination</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
